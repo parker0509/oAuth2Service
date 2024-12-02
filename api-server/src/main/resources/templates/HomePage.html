@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈 페이지</title>
+    <style>
+        /* 기본 스타일 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f8fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 헤더 */
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* 메인 콘텐츠 */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .welcome-message {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .login-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .login-btn:hover {
+            background-color: #218838;
+        }
+
+        /* 로그아웃 버튼 */
+        .logout-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #dc3545;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #c82333;
+        }
+
+        /* 푸터 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+            border-top: 1px solid #444;
+        }
+    </style>
+</head>
+<body>
+
+
+<!-- 메인 콘텐츠 -->
+<div class="container">
+    <div class="welcome-message">
+        <p>환영합니다, <span th:text="${userName}"></span>님!</p>
+    </div>
+
+    <!-- 로그아웃 버튼 -->
+    <a href="/logout" class="logout-btn">로그아웃</a>
+</div>
+
+<!-- 푸터 -->
+<footer>
+    <p>&copy; 2024 StudyMatching. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
