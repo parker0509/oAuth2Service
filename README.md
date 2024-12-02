@@ -1,6 +1,6 @@
-# Study Matching API
+# OAuth2 Service
 
-스터디와 프로젝트 매칭을 위한 Spring Boot 기반 API입니다. OAuth2 소셜 로그인 및 Swagger UI를 지원합니다.
+OAuth2 Service Spring Boot 기반 API입니다. OAuth2 소셜 로그인 및 Swagger UI를 지원합니다.
 
 ## 폴더 구조
 <pre>
