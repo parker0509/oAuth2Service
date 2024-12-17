@@ -1,16 +1,1 @@
-version: "3.7"
-networks:
-  study-matching-network:
-    driver: bridge
 
-services:
-  # db, etc...
-
-  study-matching-app:
-    image: sa2ntjulian/study-matching:latest
-    restart: always
-    ports:
-      - "8080:8080"
-    container_name: study-matching-app
-    networks:
-      - study-matching-network
